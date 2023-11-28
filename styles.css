@@ -1,0 +1,392 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(/responsiveweb/bellchurch.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    padding: 21px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(14px);
+    z-index: -1;
+}
+
+.logo img{
+    height: 60%;
+    width: 60%;
+}
+
+.navbar a{
+    font-size: 20px;
+    color: orange;
+    text-decoration: none;
+    margin-left: 32px;
+    font-weight: 500;
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    right: 5%;
+    font-size: 44px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.row1{
+    display: flex;
+    align-items: center;
+    margin: 10% 10% 0;
+}
+
+.bell{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 40%;
+    width: 40%;
+    border-radius: 25px;
+}
+
+.desc1{
+    margin-left: 5%;
+    padding: 10px;
+    font-size: 26px;
+    background-color: rgba(4,9,30,0.4);
+    border: 1px solid orange;
+    color: skyblue;
+}
+
+.row2{
+    display: flex;
+    align-items: center;
+    margin: 10% 10% 0;
+}
+
+.church{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 40%;
+    width: 40%;
+    border-radius: 25px;
+}
+
+.desc2{
+    margin-left: 5%;
+    padding: 10px;
+    font-size: 26px;
+    background-color: rgba(4,9,30,0.4);
+    border: 1px solid orange;
+    color: skyblue;
+}
+
+.row3{
+    display: flex;
+    align-items: center;
+    margin: 10% 10% 0;
+}
+
+.natba{
+    margin-left: 10px;
+    height: 40%;
+    width: 40%;
+    border-radius: 25px;
+}
+
+.desc3{
+    margin-left: 5%;
+    padding: 10px;
+    font-size: 26px;
+    background-color: rgba(4,9,30,0.4);
+    border: 1px solid orange;
+    color: skyblue;
+}
+
+.row4{
+    display: flex;
+    align-items: center;
+    margin: 10% 10% 0;
+}
+
+.river{
+    margin-left: 20px;
+    height: 40%;
+    width: 40%;
+    border-radius: 25px;
+}
+
+.desc4{
+    margin-bottom: 10%;
+    margin-left: 5%;
+    padding: 10px;
+    font-size: 26px;
+    background-color: rgba(4,9,30,0.4);
+    border: 1px solid orange;
+    color: skyblue;
+}
+
+@media screen and (max-width:850px){
+    .header{
+        padding: 20px 5%;
+    }
+
+    .row1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bell{
+        margin-top: 10%;
+        margin-left: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: 25px;
+    }
+    
+    .desc1{
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: skyblue;
+        float: right;
+    }
+
+    .row2{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .church{
+        margin-left: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: 25px;
+    }
+    
+    .desc2{
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: skyblue;
+        float: right;
+    }
+
+    .row3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .natba{
+        margin-top: 10%;
+        margin-left: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: 25px;
+    }
+    
+    .desc3{
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: skyblue;
+        float: right;
+    }
+    
+    .row4{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .river{
+        margin-top: 10%;
+        margin-left: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: 25px;
+    }
+    
+    .desc4{
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: skyblue;
+        float: right;
+    }
+
+}
+
+@media screen and (max-width:680px){
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(10px);
+        box-shadow: 8px 16px rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar{
+        height: 280px;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 18px;
+        margin: 24px 0;
+        text-align: center;
+        transform: translateY(-8px);
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a{
+        transform: translateY(0);
+    }
+
+    .row1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15%;
+    }
+
+    .bell{
+        margin-top: 10%;
+        margin-left: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: 25px;
+    }
+    
+    .desc1{
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: skyblue;
+        float: right;
+    }
+
+    .row2{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .church{
+        margin-left: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: 25px;
+    }
+    
+    .desc2{
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: skyblue;
+        float: right;
+    }
+
+    .row3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .natba{
+        margin-top: 10%;
+        margin-left: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: 25px;
+    }
+    
+    .desc3{
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: skyblue;
+        float: right;
+    }
+    
+    .row4{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .river{
+        margin-top: 10%;
+        margin-left: 20px;
+        height: 60%;
+        width: 60%;
+        border-radius: 25px;
+    }
+    
+    .desc4{
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: skyblue;
+        float: right;
+    }
+}
+
+@media screen and (max-width:600px){
+    .row1{
+        margin-top: 17%;
+    }
+}
